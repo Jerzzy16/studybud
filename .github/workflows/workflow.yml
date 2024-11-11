@@ -8,7 +8,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
     strategy:
       matrix:
         node-version: [20.x]
@@ -16,14 +15,6 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
-=======
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: 
-          node-version: 20
->>>>>>> 63894048e4e3952b7ae5f4b37e4e8558e85f768e
 
       - name: Install and Build 🔧
         run: |
@@ -33,4 +24,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist  # Adjust this to the actual build output path
+          folder: dist
