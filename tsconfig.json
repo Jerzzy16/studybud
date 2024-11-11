@@ -1,18 +1,17 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
-  "target": "esnext",
-  "module": "esnext",
   "compilerOptions": {
-    "target": "es5",
-    "lib": [ "DOM", "ESNext" ],
+    "target": "es5", // You might want to keep this if your project needs to support older browsers
+    "module": "esnext",
+    "lib": ["DOM", "ESNext"],
+    "verbatimModuleSyntax": true, // Ensure this is added as per the latest changes
     "ignoreDeprecations": "5.0",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-
   "references": [
     {
       "path": "./tsconfig.config.json"
