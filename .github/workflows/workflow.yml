@@ -18,6 +18,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          npm audit fix
           npm install
           npm run build
 
