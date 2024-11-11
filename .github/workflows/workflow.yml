@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
 
     steps:
       - name: Checkout 🛎️
@@ -18,8 +18,8 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          pnpm install
-          pnpm run build
+          npm install
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
