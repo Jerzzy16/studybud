@@ -1,0 +1,11 @@
+{
+  "git": {
+    "requireBranch": "main",
+    "commitMessage": "StudyBuddy version ${version}",
+    "tagAnnotation": "${version}"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "StudyBuddy ${version}"
+  }
+}
